@@ -18,6 +18,7 @@ public class SecurityConfig {
 
     /**
      * Security configuration that allows all traffic.
+     * Hi from Rens
      * WARNING: This is intentionally insecure for learning purposes.
      * In production, you should implement proper authentication and authorization.
      */
