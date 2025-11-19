@@ -1,6 +1,6 @@
-package nl.blitz.java21springboottemplate.repository;
+package com.osrs.hiscores.repository;
 
-import nl.blitz.java21springboottemplate.entity.UserProfile;
+import com.osrs.hiscores.entity.UserProfile;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

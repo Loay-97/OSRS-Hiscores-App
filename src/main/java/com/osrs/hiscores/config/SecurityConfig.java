@@ -1,4 +1,4 @@
-package nl.blitz.java21springboottemplate.config;
+package com.osrs.hiscores.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

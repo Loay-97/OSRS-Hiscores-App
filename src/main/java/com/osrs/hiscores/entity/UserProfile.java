@@ -1,4 +1,4 @@
-package nl.blitz.java21springboottemplate.entity;
+package com.osrs.hiscores.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
