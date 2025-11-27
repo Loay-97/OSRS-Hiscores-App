@@ -12,6 +12,12 @@ public class PlayerStatsDto {
         this.skills = new ArrayList<>();
     }
 
+    public PlayerStatsDto(String username, int combatLevel, List<SkillDto> skills) {
+        this.username = username;
+        this.combatLevel = combatLevel;
+        this.skills = skills;
+    }
+
     public String getUsername() {
         return username;
     }

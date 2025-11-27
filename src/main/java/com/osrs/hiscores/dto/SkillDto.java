@@ -1,9 +1,5 @@
 package com.osrs.hiscores.dto;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class SkillDto {
 
     private String name;
@@ -38,7 +34,7 @@ public class SkillDto {
         return xp;
     }
 
-    public void setXp(int xp) {
+    public void setXp(long xp) {
         this.xp = xp;
     }
 
@@ -46,7 +42,7 @@ public class SkillDto {
         return rank;
     }
 
-    public void setRank(int rank) {
+    public void setRank(long rank) {
         this.rank = rank;
     }
 

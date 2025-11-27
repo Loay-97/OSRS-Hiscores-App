@@ -1,13 +1,15 @@
 spring:
   application:
     name: java-21-springboot-template
-  
+
   datasource:
     url: jdbc:postgresql://aws-1-eu-north-1.pooler.supabase.com:5432/postgres?sslmode=require&reWriteBatchedInserts=true
     username: postgres.zxxvfsesezawckyrchnu
     password: loay0636561440   # vervang door jouw echte wachtwoord
     driver-class-name: org.postgresql.Driver
-  
+
+
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -23,8 +25,10 @@ spring:
       password: admin
 
 supabase:
-  url: ${SUPABASE_URL:https://xxxxx.supabase.co}
-  anon-key: ${SUPABASE_ANON_KEY:your-anon-key-here}
+  url: ${SUPABASE_URL:https://zxxvfsesezawckyrchnu.supabase.co}
+  anon-key: ${SUPABASE_ANON_KEY:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp4eHZmc2VzZXphd2NreXJjaG51Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI4NTI1OTAsImV4cCI6MjA3ODQyODU5MH0.3XrpNVGaU5cRPaTzwgIjUrI9IcFiMtnK1U5xjtDVtlM}
+  service-role-key: ${SUPABASE_SERVICE_ROLE_KEY:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp4eHZmc2VzZXphd2NreXJjaG51Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2Mjg1MjU5MCwiZXhwIjoyMDc4NDI4NTkwfQ.U_93_OAb4SoiXQkP68JlN-vxk0WtMMOX9WFoNZLnYgY}
+
 
 server:
   port: 8080
