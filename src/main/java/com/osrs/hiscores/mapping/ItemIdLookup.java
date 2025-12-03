@@ -18,7 +18,6 @@ public class ItemIdLookup {
         items.put("bandos godsword", 11804);
         items.put("dragon hunter crossbow", 21012);
         items.put("dragon hunter lance", 22978);
-
         // Voeg hierboven alle andere items toe, in lowercase
     }
 
