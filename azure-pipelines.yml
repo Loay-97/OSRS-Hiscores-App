@@ -45,4 +45,4 @@ steps:
     appName: 'osrs-backend'
     package: '$(System.DefaultWorkingDirectory)/**/*.jar'
     runtimeStack: 'JAVA|21-java21'
-    startUpCommand: 'java -jar java-21-springboot-template-0.0.1-SNAPSHOT.jar'
+    startUpCommand: 'java -jar /home/site/wwwroot/java-21-springboot-template-0.0.1-SNAPSHOT.jar'
