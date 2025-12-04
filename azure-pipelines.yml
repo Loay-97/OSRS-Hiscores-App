@@ -25,3 +25,13 @@ steps:
   inputs:
     PathtoPublish: 'target'
     ArtifactName: 'backend'
+
+- task: AzureRmWebAppDeployment@5
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'loay-devops-portal-service-connection'
+    appType: 'webAppLinux'
+    WebAppName: 'osrs-backend'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'JAVA|21-java21'
+    DeploymentTypeLinux: 'oneDeploy'    
