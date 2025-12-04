@@ -21,19 +21,27 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package -DskipTests'
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)/target'
-    Contents: '*.jar'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+# - task: CopyFiles@2
+#   inputs:
+#     SourceFolder: '$(System.DefaultWorkingDirectory)/target'
+#     Contents: '*.jar'
+#     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
-- task: AzureRmWebAppDeployment@5
+# - task: AzureRmWebAppDeployment@5
+#   inputs:
+#     ConnectionType: 'AzureRM'
+#     azureSubscription: 'loay-devops-portal-service-connection'
+#     appType: 'webAppLinux'
+#     WebAppName: 'osrs-backend'
+#     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jar'
+#     RuntimeStack: 'JAVA|21-java21'
+#     DeploymentTypeLinux: 'oneDeploy'
+#     StartupCommand: 'java -jar app.jar'
+
+- task: AzureWebApp@1
   inputs:
-    ConnectionType: 'AzureRM'
     azureSubscription: 'loay-devops-portal-service-connection'
     appType: 'webAppLinux'
-    WebAppName: 'osrs-backend'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jar'
-    RuntimeStack: 'JAVA|21-java21'
-    DeploymentTypeLinux: 'oneDeploy'
-    StartupCommand: 'java -jar app.jar'
+    appName: 'osrs-backend'
+    package: '$(System.DefaultWorkingDirectory)/**/*.jar'
+    runtimeStack: 'JAVA|21-java21'
