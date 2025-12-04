@@ -15,16 +15,17 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '21'
+    jdkVersionOption: '1.21'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package -DskipTests'
 
-- task: PublishBuildArtifacts@1
+- task: CopyFiles@2
   inputs:
-    PathtoPublish: 'target'
-    ArtifactName: 'backend'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/target'
+    Contents: '*.jar'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: AzureRmWebAppDeployment@5
   inputs:
