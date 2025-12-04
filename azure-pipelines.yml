@@ -23,7 +23,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'target'
+    PathtoPublish: 'target/*.jar'
     ArtifactName: 'backend'
 
 - task: AzureRmWebAppDeployment@5
