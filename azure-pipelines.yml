@@ -32,6 +32,6 @@ steps:
     azureSubscription: 'loay-devops-portal-service-connection'
     appType: 'webAppLinux'
     WebAppName: 'osrs-backend'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jar'
     RuntimeStack: 'JAVA|21-java21'
     DeploymentTypeLinux: 'oneDeploy'    
