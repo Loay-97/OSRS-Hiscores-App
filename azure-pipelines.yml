@@ -34,4 +34,5 @@ steps:
     WebAppName: 'osrs-backend'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jar'
     RuntimeStack: 'JAVA|21-java21'
-    DeploymentTypeLinux: 'oneDeploy'    
+    DeploymentTypeLinux: 'oneDeploy'
+    StartupCommand: 'java -jar /home/site/wwwroot/app.jar'
