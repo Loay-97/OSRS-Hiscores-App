@@ -36,4 +36,4 @@ steps:
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jar'
     RuntimeStack: 'JAVA|21-java21'
     DeploymentTypeLinux: 'oneDeploy'
-    StartupCommand: 'java -jar /home/site/wwwroot/app.jar'
+    StartupCommand: 'java -jar app.jar'
